@@ -1,0 +1,38 @@
+services:
+    laravel.test:
+        #set container name here
+        container_name: "rakaca"
+        restart: unless-stopped
+        build:
+            context: "./docker/8.3"
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: "${WWWGROUP}"
+        # Set image name here
+        image: "rakaca:latest"
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ports:
+            - "${APP_PORT:-80}:80"
+            - "${VITE_PORT:-5173}:${VITE_PORT:-5173}"
+        environment:
+            WWWUSER: "${WWWUSER}"
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: "${SAIL_XDEBUG_MODE:-off}"
+            XDEBUG_CONFIG: "${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}"
+            IGNITION_LOCAL_SITES_PATH: "${PWD}"
+        volumes:
+            - ".:/var/www/html"
+        networks:
+            - sail
+            - localnet
+        depends_on: {}
+networks:
+    sail:
+        driver: bridge
+    localnet:
+        external: true
+        name: nawasara-localnet
+volumes:
+    laravel-storage:
+        driver: local

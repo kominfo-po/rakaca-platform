@@ -35,4 +35,21 @@ return [
         ],
     ],
 
+    'keycloak' => [
+        'client_id' => env('KEYCLOAK_CLIENT_ID'),
+        'client_secret' => env('KEYCLOAK_CLIENT_SECRET'),
+        'redirect' => env('KEYCLOAK_REDIRECT_URI'),
+        'base_url' => env('KEYCLOAK_BASE_URL'),   // Specify your keycloak server URL here
+        'realms' => env('KEYCLOAK_REALM')         // Specify your keycloak realm
+    ],
+
+    'google' => [
+        'recaptcha' => [
+            'site_key' => env('RECAPTCHAV3_SITEKEY'),
+            'secret_key' => env('RECAPTCHAV3_SECRET'),
+            'version' => 'v3',
+            'score' => 0.9, // An integer between 0 and 1, that indicates the minimum score to pass the Captcha challenge.
+        ],
+    ],
+
 ];
