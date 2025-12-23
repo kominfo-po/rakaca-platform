@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3eed98d3260135638a1bc74c5c4fe06e",
+    "content-hash": "60c4d935711bb874c7263e2109307aa3",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3347,6 +3347,74 @@
                 "source": "https://github.com/papa-ree/kosadata/tree/master"
             },
             "time": "2025-12-18T09:59:55+00:00"
+        },
+        {
+            "name": "nawasara/wago",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/papa-ree/wago.git",
+                "reference": "b68a98085fd35e89509642085662f0f0666051ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/papa-ree/wago/zipball/b68a98085fd35e89509642085662f0f0666051ff",
+                "reference": "b68a98085fd35e89509642085662f0f0666051ff",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^11.0||^12.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.8",
+                "orchestra/testbench": "^10.0.0||^9.0.0",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-arch": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Wago": "Nawasara\\Wago\\Facades\\Wago"
+                    },
+                    "providers": [
+                        "Nawasara\\Wago\\WagoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nawasara\\Wago\\": "src/",
+                    "Nawasara\\Wago\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Papa Ree",
+                    "email": "ricky.romdhoni@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Whatsapp API By Nawasara",
+            "homepage": "https://github.com/nawasara/wago",
+            "keywords": [
+                "Nawasara",
+                "laravel",
+                "wago"
+            ],
+            "support": {
+                "issues": "https://github.com/papa-ree/wago/issues",
+                "source": "https://github.com/papa-ree/wago/tree/master"
+            },
+            "time": "2025-12-23T08:35:31+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -10447,6 +10515,7 @@
         "bale/core": 20,
         "livewire/livewire": 10,
         "nawasara/kosadata": 20,
+        "nawasara/wago": 20,
         "paparee/rakaca": 20
     },
     "prefer-stable": true,
