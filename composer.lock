@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60c4d935711bb874c7263e2109307aa3",
+    "content-hash": "0edf94ffb63c700c69863d8ef737250d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -307,17 +307,85 @@
             "time": "2025-11-19T17:15:36+00:00"
         },
         {
+            "name": "bale/cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/papa-ree/cms.git",
+                "reference": "237943f10a8bd488cfb3d0f50ee96653bb648dbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/papa-ree/cms/zipball/237943f10a8bd488cfb3d0f50ee96653bb648dbd",
+                "reference": "237943f10a8bd488cfb3d0f50ee96653bb648dbd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^11.0||^12.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.8",
+                "orchestra/testbench": "^10.0.0||^9.0.0",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-arch": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Cms": "Bale\\Cms\\Facades\\Cms"
+                    },
+                    "providers": [
+                        "Bale\\Cms\\CmsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bale\\Cms\\": "src/",
+                    "Bale\\Cms\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Papa Ree",
+                    "email": "ricky.romdhoni@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CMS package for manage content",
+            "homepage": "https://github.com/papa-ree/cms",
+            "keywords": [
+                "Bale",
+                "cms",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/papa-ree/cms/issues",
+                "source": "https://github.com/papa-ree/cms/tree/master"
+            },
+            "time": "2026-01-05T02:45:54+00:00"
+        },
+        {
             "name": "bale/core",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/papa-ree/core.git",
-                "reference": "6a591b21ea4d3a40e5a5007610f1ad62cd4bab81"
+                "reference": "bc96d06d9e341e4f44ab67e24b63815119dc805d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/papa-ree/core/zipball/6a591b21ea4d3a40e5a5007610f1ad62cd4bab81",
-                "reference": "6a591b21ea4d3a40e5a5007610f1ad62cd4bab81",
+                "url": "https://api.github.com/repos/papa-ree/core/zipball/bc96d06d9e341e4f44ab67e24b63815119dc805d",
+                "reference": "bc96d06d9e341e4f44ab67e24b63815119dc805d",
                 "shasum": ""
             },
             "require": {
@@ -380,7 +448,7 @@
                 "issues": "https://github.com/papa-ree/core/issues",
                 "source": "https://github.com/papa-ree/core/tree/master"
             },
-            "time": "2025-12-18T08:35:01+00:00"
+            "time": "2026-01-04T14:02:05+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
@@ -3826,12 +3894,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/papa-ree/rakaca.git",
-                "reference": "88f40b5fcb25271d8a9ec2b9d29d9d9f9ec740f3"
+                "reference": "acf7341764b8ddc14184a79098d8faf81e725452"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/papa-ree/rakaca/zipball/88f40b5fcb25271d8a9ec2b9d29d9d9f9ec740f3",
-                "reference": "88f40b5fcb25271d8a9ec2b9d29d9d9f9ec740f3",
+                "url": "https://api.github.com/repos/papa-ree/rakaca/zipball/acf7341764b8ddc14184a79098d8faf81e725452",
+                "reference": "acf7341764b8ddc14184a79098d8faf81e725452",
                 "shasum": ""
             },
             "require": {
@@ -3887,7 +3955,7 @@
                 "issues": "https://github.com/papa-ree/rakaca/issues",
                 "source": "https://github.com/papa-ree/rakaca/tree/master"
             },
-            "time": "2025-12-18T09:04:47+00:00"
+            "time": "2026-01-02T04:32:55+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -10512,6 +10580,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "bale/cms": 20,
         "bale/core": 20,
         "livewire/livewire": 10,
         "nawasara/kosadata": 20,
