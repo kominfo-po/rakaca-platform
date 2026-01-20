@@ -11,7 +11,7 @@
         "bale/core": "dev-master",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "4.0.0-beta.5",
+        "livewire/livewire": "4.0",
         "nawasara/kosadata": "dev-master",
         "nawasara/wago": "dev-master",
         "paparee/rakaca": "dev-master"
